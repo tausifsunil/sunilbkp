@@ -1,0 +1,14 @@
+<?php
+$product = $this->getProduct();
+$urlInterface = \Magento\Framework\App\ObjectManager::getInstance()->get('Magento\Framework\UrlInterface');
+$currenturl = $urlInterface->getCurrentUrl();
+$twin = $product->getTwinUrl();
+$data = explode('/', $currenturl);
+$data=array_pop($data);
+if ($data==$twin) {
+	$twin = 1;
+}else {
+	$twin = 0;
+}
+?>
+<input type="hidden" name="twin" value="<?php echo $twin; ?>">

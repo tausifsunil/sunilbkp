@@ -1,0 +1,37 @@
+type Query {
+    Categorydata: Categorydata @resolver(class: "Graphql\\Createquery\\Model\\Resolver\\CategoryList") @doc(description: "Get all Categories.")
+
+    cmsPages: CmsPages @resolver(class: "Graphql\\Createquery\\Model\\Resolver\\CmsPages") @doc(description: "Get all CMS static pages from store.")
+}
+
+type Categorydata @doc(description: "categories graphql gather Data of all category information") {
+    list: [CategoryRecord] @doc(description: "An array containing the all the category from Magento")
+}
+
+type CmsPages @doc(description: "Cms Pages graphql gather Data of all CMS page information") {
+    allPages: [PagesRecord] @doc(description: "An array containing the all the CMS Page from Magento")
+}
+
+
+type CategoryRecord {
+    uid: String @doc(description: "id of the Category")
+    name: String @doc(description: "Get name of Category")
+    parent_uid: String @doc(description: "Get Parentid of Category")
+    children_count: String @doc(description: "Get Childrencount of Category")
+    url_key: String @doc(description: "Get urlkey of Category")
+    url_path: String @doc(description: "Get urlpath of Category")
+    image: String @doc(description: "Get image of Category")
+    description: String @doc(description: "Get description of Category")
+    meta_title: String @doc(description: "Get metatitle of Category")
+    meta_keywords: String @doc(description: "Get metakeywords of Category")
+    meta_description: String @doc(description: "Get metadescription of Category")
+
+}
+
+type PagesRecord {
+    id: String @doc(description: "id of the cms pages")
+    identifier: String @doc(description: "Identifier of CMS Page")
+    name: String @doc(description: "Get name of CMS Page")
+    page_layout: String @doc(description: "Get page layout of CMS Page")
+    content: String @doc(description: "Content of CMS Page")    
+}

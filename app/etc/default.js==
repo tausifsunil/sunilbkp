@@ -1,0 +1,5 @@
+require(['jquery'],function($){
+	if($(".captcha-reload").is(":visible")){
+	     $('.captcha-reload').trigger('click');
+	 }
+});

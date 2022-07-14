@@ -1,0 +1,54 @@
+<h2>Welcome to Magento2</h2>
+<?php
+    // echo "<pre>";
+    // $data=$block->saveData();
+	$collection = $block->getCollection();
+
+    // print_r($collection->getData());
+    // die();
+if ($collection->count()) {
+?>
+<div class="table-wrapper orders-history">
+    <table class="data table table-order-items history" id="my-orders-table">
+        <caption class="table-caption"><?php echo __('Grid Record') ?></caption>
+        <thead>
+        <tr>
+            <th scope="col" class="col id"><?php echo __('ID') ?></th>
+            <th scope="col" class="col productid"><?php echo __('ProductID') ?></th>
+            <th scope="col" class="col productname"><?php echo __('ProductName') ?></th>
+            <th scope="col" class="col sku"><?php echo __('SKU') ?></th>
+            <th scope="col" class="col customername"><?php echo __('CustomerName') ?></th>
+            <th scope="col" class="col createat"><?php echo __('Created At') ?></th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php
+            $i=0;
+				foreach ($collection as $item): ?>
+        <tr>
+            <td data-th="<?= $block->escapeHtml(__('ID')) ?>" class="col id">
+                <?php echo $item->getId() ?>
+            </td>
+            <td data-th="<?= $block->escapeHtml(__('ProductID')) ?>" class="col name">
+                <?php echo $item->getProductid() ?>
+            </td>
+            <td data-th="<?= $block->escapeHtml(__('ProductName')) ?>" class="col email">
+                <?php echo $item->getProductname()?>
+            </td>
+            <td data-th="<?= $block->escapeHtml(__('SKU')) ?>" class="col telephone">
+                <?php echo $item->getSku() ?>
+            </td>
+            <td data-th="<?= $block->escapeHtml(__('CustomerName')) ?>" class="col telephone">
+                <?php echo $item->getCustomername() ?>
+            </td>
+            <td data-th="<?= $block->escapeHtml(__('Created At')) ?>"
+                class="col title"><?php echo date('Y-m-d', strtotime($item->getCreatedAt())); ?></td>
+        </tr>
+
+        <?php $i++;   endforeach; ?>
+        </tbody>
+    </table>
+</div>
+<?php
+	}
+	?>

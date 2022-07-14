@@ -1,0 +1,23 @@
+<?php
+
+	$collection=$block->getCollection();
+	// print_r($collection->getData());
+	// die;
+	$url=$block->getLogo();
+	foreach($collection as $value)
+	{
+		if($value->getStatus())
+		{
+			if($value->getPosition()=='top-left')
+			{
+				?>
+					<div class='top-left'>
+						<img src="<?php echo $url.$value->getLogo(); ?>" >
+					</div>
+				<?php
+			}
+		}
+	}
+
+	// die();
+?>

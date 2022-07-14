@@ -1,0 +1,44 @@
+<?php
+
+$product = $this->getProduct();
+// echo "<pre>"; print_r(json_decode(json_encode($product->getData()),1));
+$urlInterface = \Magento\Framework\App\ObjectManager::getInstance()->get('Magento\Framework\UrlInterface');
+$currenturl = $urlInterface->getCurrentUrl();
+$twin = $product->getTwinUrl();
+// $product->getProductUrl());
+$data = explode('/', $currenturl);
+$data=array_pop($data);
+if($data==$twin)
+{
+	$twin = 0;
+}
+else
+{
+	$twin = 1;
+}
+// die();
+
+?>
+<form action="<?php echo $block->getUrl('banners/post/index'); ?>" method="post">
+<input type="switch" name="twin" value="<?php echo $twin; ?>">
+</form>
+<!-- // echo "<pre>"; -->
+<!-- // if($product->getSwitch())
+// {
+// 	echo $product->getTextbox()."<br>";
+// 	echo $product->getSelectbox()."<br>";
+// 	echo $product->getMultiselectbox()."<br>";
+
+// 	$a=$product->getPteditor()."<br>";
+// 	   $geteditortext=$this->helper('Magento\Catalog\Helper\Output')->productAttribute($block->getProduct(), $a, 'pteditor'); 
+// 	      echo $geteditortext;
+// }
+// die;
+//print_r(json_decode(json_encode($product->getData('pteditor'),1)));
+//die;
+
+// $ressource = $product->getResource();
+// $store = $this->_storeManager->getStore();
+
+// $ressource->getAttributeRawValue($product->getId(),'metal_pads',$store->getId());
+//die(); -->

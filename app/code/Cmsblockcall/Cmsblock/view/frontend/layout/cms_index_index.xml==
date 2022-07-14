@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="main">            
+ <!--                <block class="Cmsblockcall\Cmsblock\Block\Display" name="Fortest" template="Cmsblockcall_Cmsblock::block1.phtml">                    
+                </block> -->
+                <!-- <block class="Cmsblockcall\Cmsblock\Block\Categorylist" name="list" template="Cmsblockcall_Cmsblock::categorylist.phtml">                    
+                </block> -->
+<!--                 <block class="Cmsblockcall\Cmsblock\Block\Header" name="headerdata" template="Cmsblockcall_Cmsblock::headerdata.phtml">                    
+                </block> -->                
+        </referenceContainer>
+    </body>
+</page>

@@ -1,0 +1,12 @@
+<?php
+
+$category=$block->getCurrentCategory()->getdescription();
+
+$string =$category;
+
+$token = explode('</p>', $string);
+
+echo $token[0];
+// echo $token."<br>hello";
+// string[] output = Regex.Split(input, "(?=<)|(?<=>)");
+// /print_r(json_encode($token));

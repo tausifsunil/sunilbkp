@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Checkout\Model\Cart">
+        <plugin name="update_cart" type="Plugindemo\Pluginqty\Plugin\Changequantity" sortOrder="1" disabled="true"/>
+    </type>
+    <!-- <type name="Snk\Captcha\Model\ExpressionGenerator">
+        <plugin name="update_captcha" type="Plugindemo\Pluginqty\Plugin\NewexpressionGenerator" sortOrder="1" disabled="false"/>
+    </type> -->
+</config>

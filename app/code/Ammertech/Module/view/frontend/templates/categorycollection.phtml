@@ -1,0 +1,13 @@
+<?php
+
+// $data = $block->getStoreCategories();
+
+// $child = $block->getchilddata();
+$product = $block->getProductCollectionByCategories(6);
+	echo "<pre>";
+foreach ($product as $data) {
+	print_r($data->getImage());
+	echo "<br>";
+
+}
+// die;

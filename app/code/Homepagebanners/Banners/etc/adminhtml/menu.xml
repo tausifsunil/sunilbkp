@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Backend/etc/menu.xsd">
+    <menu>
+        <add id="Homepagebanners_Banners::view" title="Grid" module="Homepagebanners_Banners" sortOrder="50" resource="Homepagebanners_Banners::view"/>
+        <add id="Homepagebanners_Banners::menu" title="Banners" module="Homepagebanners_Banners" sortOrder="20" parent="Homepagebanners_Banners::view" action="banners/index/index" resource="Homepagebanners_Banners::menu"/>
+    </menu>
+</config>

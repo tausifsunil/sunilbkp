@@ -1,0 +1,13 @@
+<form action="<?php echo $block->getUrl('banners/post/index'); ?>" method="post" enctype="multipart/form-data" data-mage-init='{"validation":{}}' >
+            <input type="text" name="name" id="name" placeholder="Enter NAME" required><br><br>
+            <input type="text" name="email" placeholder="E-MAIL" data-validate="{required:true, 'validate-email':true}" ><br><br>
+            <select name="hobby[]" id="hobby[]" multiple>HOBBY
+                <option value="football">Football</option>
+                <option value="cricket">Cricket</option>
+                <option value="reading">Reading</option>
+                <option value="music">Music</option>
+            </select><br><br>
+            <input type="date" id="dob" name="dob" required><br><br>
+            <input type="file" name="logo[]" id="logo" class="input-file required"  aria-required="true" multiple><br><br>
+            <input type="submit" name="submit" value="INSERT">
+</form>

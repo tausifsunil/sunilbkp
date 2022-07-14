@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Backend/etc/menu.xsd">
+    <menu>
+        <add id="Newslatter_Custom::view" title="newslatter" module="Newslatter_Custom" sortOrder="50" resource="Newslatter_Custom::view"/>
+        <add id="Newslatter_Custom::menu" title="custom" module="Newslatter_Custom" sortOrder="20" parent="Newslatter_Custom::view" action="custom/index/index" resource="Newslatter_Custom::menu"/>
+    </menu>
+</config>

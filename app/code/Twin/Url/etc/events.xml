@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="catalog_controller_product_view">
+        <observer name="Twin_Url1" instance="Twin\Url\Observer\View" />
+        <!-- <observer name="Twin_Url1" disabled="true" /> -->
+    </event>
+
+    <event name="catalog_product_save_after">
+        <observer name="Twin_Url2" instance="Twin\Url\Observer\Product\Data" />
+        <!-- <observer name="Twin_Url2" disabled="true" /> -->
+    </event>
+    
+    <event name="checkout_cart_product_add_after">
+        <observer name="Twin_Url3" instance="Twin\Url\Observer\Cart" />
+        <!-- <observer name="Twin_Url3" disabled="true" /> -->
+    </event>
+</config>

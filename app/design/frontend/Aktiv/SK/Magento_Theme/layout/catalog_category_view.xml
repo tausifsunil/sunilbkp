@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <!-- <referenceBlock name="page.title.wrapper" display="false"/>      -->
+        <!-- <referenceBlock name="content" remove="true" /> -->
+        <!-- <referenceContainer name="column.main" remove="true"/> -->
+        <!-- <move element="category.description" destination="content.bottom" /> -->
+        <!-- <move element="move.p1" destination="column.main" before="-"/>  -->
+        <!-- <move element="category.description" destination="page-title-wrapper" />-->
+    </body>
+</page>

@@ -1,0 +1,9 @@
+var config = {
+    'config': {
+        'mixins': {
+            'Magento_Tax/js/view/checkout/minicart/subtotal/totals': {
+                'Shippingcart_Shipcharge/js/view/checkout/minicart/subtotal/totals-mixin': true
+            },
+        }
+    }
+};

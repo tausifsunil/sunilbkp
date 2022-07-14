@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="columns.top">
+            <container name="custom-content" as="custom-content" label="Page Custom
+            Content" htmlTag="div" htmlClass="container1">
+                <block class="Magento\Cms\Block\Block" name="hello_block1">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">hello_block1</argument>
+                    </arguments>
+                </block>
+
+                <container name="left" as="left" label="left" htmlTag="div" htmlClass="left">
+                    <block class="Cmsblockcall\Cmsblock\Block\Display" name="Fortest" template="Cmsblockcall_Cmsblock::block1.phtml">
+                    </block>
+                </container>
+
+                <container name="right" as="right" label="right" htmlTag="div" htmlClass="right">
+                    <block class="Cmsblockcall\Cmsblock\Block\Display" name="Fortest1" template="Cmsblockcall_Cmsblock::block2.phtml">
+                    </block>
+                </container>
+            </container>
+        
+            <container name="container2" as="container2" label="container2" htmlTag="div" htmlClass="container2">
+                <block class="Magento\Cms\Block\Block" name="hello_block2">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">hello_block2</argument>
+                    </arguments>
+                </block>
+                
+                <block class="Cmsblockcall\Cmsblock\Block\Display" name="Fortest2" template="Cmsblockcall_Cmsblock::block3.phtml">
+                </block>
+                
+            </container>
+
+
+        </referenceContainer>
+    </body>
+</page>

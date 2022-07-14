@@ -1,0 +1,24 @@
+<button class = 'sku-filter'>  
+    <span> 
+        <?= __('0-9') ?> 
+    </span> 
+</button>
+<button class = 'name-filter'> 
+    <span> 
+        <?= __('a-z') ?> 
+    </span> 
+</button>
+<script>
+    require(['jquery', 'jquery/ui'], function($){
+    $(document).ready(function(){
+        $(".sku-filter").click(function(){
+
+        });
+
+        $(".name-filter").click(function(){
+            var val2 = $('.name-filter').val();
+            console.log('name filter click');
+        }); 
+    });
+    });
+</script>

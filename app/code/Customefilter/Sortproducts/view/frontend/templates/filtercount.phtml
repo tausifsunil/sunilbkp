@@ -1,0 +1,17 @@
+<div class="filter-count">
+    <span class="filter-count-span"></span>
+    <?=__('filters');?>
+</div>
+<script type="text/javascript">
+    require(['jquery', 'jquery/ui'], function($){
+        jQuery(document).ready(function() {
+            var count = jQuery('.filter-title').attr("data-count");
+            jQuery(".filter-count-span").append(count);
+        });         
+        jQuery(document).ajaxComplete(function() {
+            var count = jQuery('.filter-title').attr("data-count");
+            jQuery(".filter-count-span").empty();
+            jQuery(".filter-count-span").append(count);
+        });
+    });
+</script>

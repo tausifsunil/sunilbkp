@@ -1,0 +1,45 @@
+<div id="popup-modal">
+    <?php
+    echo $this->getLayout()
+        ->createBlock(\Magento\Cms\Block\Block::class)
+        ->setBlockId('hello_block3') //replace my_cmsblock_identifier with real CMS bock identifier
+        ->toHtml();
+    // $block->getChildHtml('state');
+    ?>
+</div>
+<button id = 'ok'>Click</button>
+<script>
+    require(
+        [
+            'jquery',
+            'Magento_Ui/js/modal/modal'
+        ],
+        function(
+            $,
+            modal
+        ) {
+            var options = {
+                type: 'popup',
+                responsive: true,
+                innerScroll: true,
+                title: 'Custom Form Popup',
+                buttons: [{
+                    text: $.mage.__('Close'),
+                    class: '',
+                    click: function () {
+                        this.closeModal();
+                    }
+                }]
+            };
+            var count = 0;
+                $(this).scroll(function(){
+                    if(count==0)
+                    {
+                        var popup = modal(options, $('#popup-modal'));
+                        $('#popup-modal').modal('openModal');
+                    }
+                    count++;
+                })
+        }
+    );
+</script>

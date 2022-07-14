@@ -1,0 +1,20 @@
+<?php
+    $skufilter = $block->skufilter();
+    $namefilter = $block ->namefilter();
+?>
+
+<div class='btn-sku'>
+    <a href='<?php echo $skufilter; ?>'><button class = 'sku-filter' >  
+        <span> 
+            <?= __('0-9') ?> 
+        </span> 
+    </button></a>
+</div>
+
+<div class='btn-name'>
+    <a href='<?php echo $namefilter; ?>'><button class = 'name-filter' >  
+        <span> 
+            <?= __('a-z') ?> 
+        </span> 
+    </button></a>
+</div>

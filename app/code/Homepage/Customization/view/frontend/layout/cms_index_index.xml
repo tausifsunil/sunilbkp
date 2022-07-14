@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	layout="1column"
+	xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<head>
+		<script src="Slider_Customization::js/common.js" async="async" />
+	</head>
+    <body>
+        <referenceContainer name="content">
+
+        	<block class="Homepage\Customization\Block\Review"
+            	name="review"
+            	template="Homepage_Customization::review.phtml" />
+
+            <block class="Homepage\Customization\Block\Mostview"
+            	name="mostview"
+            	template="Homepage_Customization::mostview.phtml" />
+
+
+            <block class="Homepage\Customization\Block\ProductCollection"
+            	name="slider"
+            	template="Homepage_Customization::slider.phtml" />
+
+            
+            <block class="Homepage\Customization\Block\Bestseller"
+            	name="bestseller"
+            	template="Homepage_Customization::bestseller.phtml" />
+        
+        </referenceContainer>
+    </body>
+</page>

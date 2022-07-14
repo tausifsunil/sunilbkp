@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	layout="1column"
+	xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<head>
+		<script src="Slider_Customization::js/common.js" async="async" />
+	</head>
+    <body>
+        <referenceContainer name="content">
+            <block class="Categoryproduct\Getproduct\Block\Productdata"
+            	name="product"
+            	template="Categoryproduct_Getproduct::product.phtml" />
+        </referenceContainer>
+    </body>
+</page>

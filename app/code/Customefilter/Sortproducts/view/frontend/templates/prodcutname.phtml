@@ -1,0 +1,10 @@
+<?php 
+$prodcutname = $block->getprodcutname();
+?>
+<div class='product_name'>
+    <h3> <?php echo $prodcutname; ?>
+</div>
+
+
+<?= $block->getChildHtml('custom.search') ?>
+            <?= $block->getChildHtml('custom.filter') ?>

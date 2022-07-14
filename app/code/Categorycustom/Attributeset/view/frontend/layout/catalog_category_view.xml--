@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+     <body>
+          <referenceBlock name="category.products.list"  class="Categorycustom\Attributeset\Block\HelloWorld" />
+          <!-- <referenceContainer name="div.sidebar.main">
+            <block class="Magento\Framework\View\Element\Template" name="top.search" as="topSearch" template="Magento_Search::form.mini.phtml" before='-'/>
+        </referenceContainer> -->
+     </body>
+</page>

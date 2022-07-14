@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="catalog_controller_product_view">
+        <!-- <observer name="Changeprice" instance="Observerdemo\Changeprice\Observer\Product\Data" /> -->
+        <observer name="Changeprice" disabled="true" />
+    </event>
+</config>

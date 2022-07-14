@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Backend/etc/menu.xsd">
+    <menu>
+        <add id="Formdata_Banners::view" title="Formdata" module="Formdata_Banners" sortOrder="50" resource="Formdata_Banners::view"/>
+        <add id="Formdata_Banners::menu" title="Banners" module="Formdata_Banners" sortOrder="20" parent="Formdata_Banners::view" action="banners/index/index" resource="Formdata_Banners::menu"/>
+    </menu>
+</config>

@@ -1,0 +1,14 @@
+<?php
+$category = $block->getCurrentCategory();
+$isenable = $category->getIsenable();
+//echo $isenable."<br>";
+if($isenable)
+{ 
+    $text=$category->gettext();
+     echo "<b>Text : ".$text."<br>";
+    $select=$category->getSelect();
+     echo "Fruit : $select<br>";
+    $multiselect=$category->getMultiselect();
+     echo "Cars : $multiselect</b>";
+}
+?>

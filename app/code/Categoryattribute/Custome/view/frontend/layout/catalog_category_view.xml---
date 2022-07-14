@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+     <body>
+          <referenceBlock name="category.description" remove="true"/>
+          <referenceContainer name="content.top">
+          <block class="Magento\Catalog\Block\Category\View" name="desc" template="Categoryattribute_Custome::top.phtml"/>
+          </referenceContainer>
+           <referenceContainer name="content.bottom">
+          <block class="Magento\Catalog\Block\Category\View" name="desc1" template="Categoryattribute_Custome::bottom.phtml"/>
+          </referenceContainer>
+          <!-- <move element="movep1" destination="movep2" /> -->
+          <!-- <move element="movep1" destination="movep2" />  -->
+     </body>
+</page>

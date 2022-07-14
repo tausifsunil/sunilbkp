@@ -1,0 +1,63 @@
+<div id="popup-modal">
+    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('Newsletter')->toHtml();?>
+    <form action="<?php echo $block->getUrl('custom/popup/index'); ?>" method="post" enctype="multipart/form-data">
+            <input type="text" name="firstname" id="firstname" placeholder="first name"><br><br>
+            <input type="text" name="lastname" id="lastname" placeholder="last name"><br><br>
+            <input type="text" name="email" placeholder="E-MAIL"><br><br>
+            <input type="submit" name="submit" value="submit">
+</form>
+
+    
+
+
+</div>
+<script>
+    require(
+        [
+            'jquery',
+            'Magento_Ui/js/modal/modal',
+            'jquery/jquery.cookie'
+        ],
+        function(
+            $,modal
+        ) {
+            $(document).ready(function(){
+                 
+            var check_cookie = $.cookie('popup'); // set cookie name
+            if(!check_cookie){
+
+            var date = new Date();
+            date.setTime(date.getTime() + (3600 * 1000));
+            $.cookie('popup', 'hope', {expires: date}); // Set Cookie Expiry Time
+            
+            var options = {
+                type: 'popup',
+                responsive: true,
+                innerScroll: true,
+                title: 'Popup',
+                buttons: [{
+                    text: $.mage.__('Close'),
+                    class: '',
+                    click: function () {
+                        this.closeModal();
+                    }
+                }]
+            };
+ 
+            var popup = modal(options, $('#popup-modal'));
+            if(!check_cookie)
+            {
+                $('#popup-modal').modal('openModal');
+            }
+            else
+            {
+                return false;
+            }
+            }
+            else{
+                return false;
+            }
+        });
+        }
+    );
+</script>

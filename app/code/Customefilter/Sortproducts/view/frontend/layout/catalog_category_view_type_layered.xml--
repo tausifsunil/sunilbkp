@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+     <body>
+          <referenceBlock name="catalog.leftnav">
+            <block class="Magento\Framework\View\Element\Template" name="search" as="custom.search" template="Customefilter_Sortproducts::search.mini.phtml" before='-' />
+            <block class="Customefilter\Sortproducts\Block\Filterproduct" name="custom.filter" template="Customefilter_Sortproducts::buttons.phtml" after='custom.search'/>
+          </referenceBlock>
+          <!-- <move element='search' destination='filter-content'/> -->
+     </body>
+</page>

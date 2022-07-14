@@ -1,0 +1,11 @@
+initialize: function () {
+    this._super();
+    this.cart = customerData.get('cart');
+    this.cartData = customerData.get('cart-data');
+},
+
+getShippingAmount: function() {
+    if (this.cartData() && this.cartData().totals) {
+        return this.cartData().totals.shipping_amount;
+    }
+}

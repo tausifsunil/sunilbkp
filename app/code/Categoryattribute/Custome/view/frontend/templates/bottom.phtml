@@ -1,0 +1,55 @@
+<?php
+
+$category=$block->getCurrentCategory()->getdescription();
+$string =$category;
+
+$x=(explode('</p>', $string));
+unset($x[0]);
+echo implode('</p>', $x);
+/*for($i=1;$i<sizeof($x);$i++)
+{
+	echo $x[$i];
+}*/
+
+// <!-- // $doc = new DOMDocument();
+// // $doc->loadHTML($category);
+// // echo "<pre>";
+// // $x=$doc->saveHTML();
+// // echo $x;
+// // die();
+
+// $token = strtok($string, '</p>');
+// // /echo '<pre>';
+// while ($token !== false)
+// {
+// 	$x[]=$token;
+// 	$token = strtok('</p>');
+
+// }
+// echo '<pre>';
+// print_r($x);die;
+
+	
+// for($i=1;$i<sizeof($x);$i++)
+// {
+// 	echo $x[$i]."<br>";
+// }
+
+//  // die();
+// // $x=json_encode($category);
+// //  // print_r($x);
+// //  print_r(json_decode($x));
+// //  die();
+// // $string =$x;
+// // $token = strtok($string,'<\/p>\r\n');
+// // while ($token !== false)
+// // {
+// // 	//$x[]=$token;
+// // 	echo $token."<br>";
+// // 	$token = strtok('<\/p>\r\n');
+// // }
+// // for($i=1;$i<sizeof($x);$i++)
+// // {
+// // 	echo $x[$i];
+// // }
+// // die(); -->

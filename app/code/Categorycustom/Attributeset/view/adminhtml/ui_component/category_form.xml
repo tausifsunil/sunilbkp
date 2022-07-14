@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <fieldset name="Attribute-Set">
+        <settings>
+            <collapsible>true</collapsible>
+            <label translate="true">Attribute-Set</label>
+        </settings>
+            <field name="attributeset">
+                <argument name="data" xsi:type="array">
+                    <item name="options" xsi:type="object">Magento\Catalog\Model\Product\AttributeSet\Options</item>
+                    <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string" translate="true">Attributeset</item>
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="formElement" xsi:type="string">multiselect</item>
+                    <item name="source" xsi:type="string">multiselect</item>
+                    <item name="dataScope" xsi:type="string">attributeset</item>
+                    <item name="sortOrder" xsi:type="number">1</item>
+                    </item>
+                </argument>
+            </field>
+    </fieldset>
+</form>

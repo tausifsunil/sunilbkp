@@ -1,0 +1,22 @@
+type Query {
+    Headerdata: Headerdata @resolver(class: "Customheader\\Modification\\Model\\Resolver\\Headerdata") @doc(description: "Header data")
+    CurrencyList: CurrencyList @resolver(class: "Customheader\\Modification\\Model\\Resolver\\Currencydata") @doc(description: "Header data")
+}
+
+type Headerdata @doc(description: "headerdata") {
+    logoAlt: String @doc(description: "logoAlt")
+    logoWidth: String @doc(description: "logoWidth")
+    logoHeight: String @doc(description: "logoHeight")
+    logosrc: String @doc(description: "logosrc")
+    currencydata:[CurrencyList]
+}
+
+type CurrencyList @doc(description: "categories graphql gather Data of all category information") {
+    list: [currency] @doc(description: "list of the currency")
+}
+
+type currency {
+    countryname: String @doc(description: "configredcurrencty name")
+}
+
+
